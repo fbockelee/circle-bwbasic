@@ -1,0 +1,6 @@
+#define HAVE_UNIX TRUE
+#define DIRECTORY_CMDS FALSE
+#define NO_MAIN
+#define HAVE_UNIX_GCC FALSE
+
+

@@ -26,7 +26,7 @@ This project use
 	
 ### Building the Libraries
 	
-* Install circle (provided as example)
+* Install circle (provided as example)<br>
 
     cd $HOME/opt 
     git clone https://github.com/rsta2/circle.git 
@@ -42,30 +42,34 @@ in $HOME/opt/circle create Config.mk<br>
     ./makeall clean  
     ./makeall  
 
-* Install circle-stdlib (provided as example)
-   cd $HOME/opt
-   git clone --recursive https://github.com/smuehlst/circle-stdlib.git
+* Install circle-stdlib (provided as example)<br>
+
+    cd $HOME/opt
+    git clone --recursive https://github.com/smuehlst/circle-stdlib.git
 	
 * Build circle-stdlib (provided as example)
-	cd $HOME/opt/circle-stdlib
-	./configure
-	make
-	
-* Build circle-bwbasic
-   cd $HOME/opt/circle-stdlib/samples
-   git clone --recursive https://github.com/fbockelee/circle-bwbasic.git
-   make
 
-   Then copy these files to SD :
-   kernel.img
-   profile.bas
-   TEST.bas
+    cd $HOME/opt/circle-stdlib
+    ./configure
+    make
+	
+* Build circle-bwbasic<br>
+
+    cd $HOME/opt/circle-stdlib/samples
+    git clone --recursive https://github.com/fbockelee/circle-bwbasic.git
+    make
+
+Then copy these files to SD :<br>
+
+    kernel.img
+    profile.bas
+    TEST.bas
    
 ## Current Release [v0.1](https://github.com/fbockelee/circle-bwbasic/releases/tag/v0.1)
 
 * Use [Circle Step 40](https://github.com/rsta2/circle/releases/tag/Step40).
 * Use [Circle-stdlib v11](https://github.com/smuehlst/circle-stdlib/releases/tag/v11.0).
-* Use [Bwbasic v3.20].
+* Use [Bwbasic v3.20](https://sourceforge.net/projects/bwbasic/).
 
 Initial build of circle-bwbasic with Circle, Circle-stdlib 
 

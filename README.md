@@ -3,10 +3,12 @@
 ## Overview
 
 If like me you play with 80's computers, 
-you remember the time where computer have all-in-one OS & Language BASIC.
+you remembered the time where computer have all-in-one OS & Language BASIC.a
+
 My goal is to have an equivalent with the Raspberry PI 
 
 The goal of this project is to provide BASIC support for the PI Computer
+
 This project use
 - Raspberry Pi bare metal environment [Circle](https://github.com/rsta2/circle).
 - C and C++ standard library support for Circle [Circle-stdlib](https://github.com/smuehlst/circle-stdlib).
@@ -25,19 +27,20 @@ This project use
 ### Building the Libraries
 	
 * Install circle (provided as example)
-	cd $HOME/opt
-	git clone https://github.com/rsta2/circle.git
+
+    cd $HOME/opt 
+    git clone https://github.com/rsta2/circle.git 
 	
 * Build circle (provided as example)
 
-	in $HOME/opt/circle create Config.mk
+in $HOME/opt/circle create Config.mk<br>  
 
-	RASPPI = 1
-	PREFIX = arm-eabi-
+    RASPPI = 1    
+    PREFIX = arm-eabi-  
 
-	cd $HOME/opt/circle
-	./makeall clean
-	./makeall
+    cd $HOME/opt/circle  
+    ./makeall clean  
+    ./makeall  
 
 * Install circle-stdlib (provided as example)
    cd $HOME/opt

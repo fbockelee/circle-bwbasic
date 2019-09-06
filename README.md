@@ -80,10 +80,10 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 * some basic BASIC test work (example : 100 PRINT "HELLO")
 
 ### Known issues
-* Access to files hang the system (basic command : CLOAD TEST.BAS)
-* Confirm or not the initial loading of profile.bas (needed to config)
+* Access to files hang the system (basic command : CLOAD "TEST.BAS")
+* Confirm or not the initial loading of profile.bas (needed to config of bwbasic)
 * some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in stdlib-circle ?
-* I have a french keyboard, i need to change mapping in circle (in progress)
+* (solved)I have a french keyboard, i need to change mapping in circle
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
 * Some minor warning in compilation 
 * When no keyboard, scrolling with false input (minor)

@@ -32,12 +32,12 @@ This project use
 
 * Build circle (provided as example)
 
-In $HOME/opt/circle create Config.mk<br>  
+    In $HOME/opt/circle create Config.mk    
 
     RASPPI = 1    
     PREFIX = arm-eabi-  
 
-Then<br>
+    Then    
 
     cd $HOME/opt/circle  
     ./makeall clean  
@@ -81,11 +81,13 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 
 ### Known issues
 * Access to files hang the system (basic command : CLOAD TEST.BAS)
+* Confirm or not the initial loading of profile.bas (needed to config)
 * some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in stdlib-circle ?
 * I have a french keyboard, i need to change mapping in circle (in progress)
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
+* Some minor warning in compilation 
 * When no keyboard, scrolling with false input (minor)
-* CLS do nothing (clearscreen)
+* CLS do nothing (clearscreen) - due to BWBASIC not detecting ANSI terminal
 * Many commands/functions not tested
 
 ### Which script created/updated
@@ -112,10 +114,10 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 			extern int main (int argc, char **argv);
 			#endif
 * add  bwb_user.h file
-		#define HAVE_UNIX TRUE 
-		#define DIRECTORY_CMDS FALSE 
-		#define NO_MAIN 
-		#define HAVE_UNIX_GCC FALSE 
+    #define HAVE_UNIX TRUE    
+    #define DIRECTORY_CMDS FALSE    
+    #define NO_MAIN    
+    #define HAVE_UNIX_GCC FALSE    
 
 ### Explanations
 * HAVE_UNIX TRUE added to compile with stdlib

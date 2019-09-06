@@ -20,7 +20,6 @@ This project use
 
 * same prerequisites than circle-stdlib
 * Successfully tested with:
-  * gcc-arm-8.2-2019.01-x86_64-arm-eabi
     * gcc-arm-8.2-2019.01-x86_64-arm-eabi.tar.xz from https://developer.arm.com/open-source/gnu-toolchain/gnu-a/downloads
 * Successfully tested with PI 1
 	
@@ -28,15 +27,17 @@ This project use
 	
 * Install circle (provided as example)<br>
 
-    cd $HOME/opt 
-    git clone https://github.com/rsta2/circle.git 
-	
+    cd $HOME/opt    
+    git clone https://github.com/rsta2/circle.git    
+
 * Build circle (provided as example)
 
-in $HOME/opt/circle create Config.mk<br>  
+In $HOME/opt/circle create Config.mk<br>  
 
     RASPPI = 1    
     PREFIX = arm-eabi-  
+
+Then<br>
 
     cd $HOME/opt/circle  
     ./makeall clean  
@@ -44,26 +45,26 @@ in $HOME/opt/circle create Config.mk<br>
 
 * Install circle-stdlib (provided as example)<br>
 
-    cd $HOME/opt
-    git clone --recursive https://github.com/smuehlst/circle-stdlib.git
+    cd $HOME/opt    
+    git clone --recursive https://github.com/smuehlst/circle-stdlib.git    
 	
 * Build circle-stdlib (provided as example)
 
-    cd $HOME/opt/circle-stdlib
-    ./configure
-    make
+    cd $HOME/opt/circle-stdlib    
+    ./configure    
+    make    
 	
 * Build circle-bwbasic<br>
 
-    cd $HOME/opt/circle-stdlib/samples
-    git clone --recursive https://github.com/fbockelee/circle-bwbasic.git
-    make
+    cd $HOME/opt/circle-stdlib/samples    
+    git clone --recursive https://github.com/fbockelee/circle-bwbasic.git    
+    make    
 
 Then copy these files to SD :<br>
 
-    kernel.img
-    profile.bas
-    TEST.bas
+    kernel.img    
+    profile.bas    
+    TEST.bas    
    
 ## Current Release [v0.1](https://github.com/fbockelee/circle-bwbasic/releases/tag/v0.1)
 

@@ -78,41 +78,40 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 * The banner of bwbasic is ok, so stdout work
 * Input in command-line, so stdin work
 * some basic BASIC test work (example : 100 PRINT "HELLO")
+* access to files on SD works (LOAD "TEST.BAT" and then RUN)
 
 ### Known issues
-* Access to files hang the system (basic command : CLOAD "TEST.BAS")
-* Confirm or not the initial loading of profile.bas (needed to config of bwbasic)
 * some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in stdlib-circle ?
-* (solved)I have a french keyboard, i need to change mapping in circle
+* Typing OPTION TERMINAL ANSI and then CLS hangs the system (work undex linux) 
+* I have a french keyboard, i change mapping in circle, need change in stdlib ?
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
 * Some minor warning in compilation 
 * When no keyboard, scrolling with false input (minor)
-* CLS do nothing (clearscreen) - due to BWBASIC not detecting ANSI terminal
 * Many commands/functions not tested
 
 ### Which script created/updated
 * Create kernel.cpp,kernel.h,main.cpp
 * Create Makefile 
 * Update of bwbasic files :
-	- bwbasic.c
-		replace
-			extern int main (int argc, char **argv);
-		by
-			#if defined(NO_MAIN)
-			extern int main_bwbasic (int argc, char **argv);
-			#else
-			extern int main (int argc, char **argv);
-			#endif
-	- bwbasic.h
-		uncomment #include "bwb_user.h"
-		replace
-			extern int main (int argc, char **argv);
-		by
-			#if defined(NO_MAIN)
-			extern int main_bwbasic (int argc, char **argv);
-			#else
-			extern int main (int argc, char **argv);
-			#endif
+- bwbasic.c
+    replace    
+    extern int main (int argc, char **argv);    
+    by    
+    #if defined(NO_MAIN)    
+    extern int main_bwbasic (int argc, char **argv);    
+    #else    
+    extern int main (int argc, char **argv);    
+    #endif    
+- bwbasic.h
+    uncomment #include "bwb_user.h"    
+    replace    
+    extern int main (int argc, char **argv);    
+    by    
+    #if defined(NO_MAIN)    
+    extern int main_bwbasic (int argc, char **argv);    
+    #else    
+    extern int main (int argc, char **argv);    
+    #endif    
 * add  bwb_user.h file
     #define HAVE_UNIX TRUE    
     #define DIRECTORY_CMDS FALSE    

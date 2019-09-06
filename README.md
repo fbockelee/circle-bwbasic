@@ -3,7 +3,7 @@
 ## Overview
 
 If like me you play with 80's computers, 
-you remembered the time where computer have all-in-one OS & Language BASIC.a
+you remembered the time where computer have all-in-one OS & Language BASIC.
 
 My goal is to have an equivalent with the Raspberry PI 
 
@@ -78,11 +78,11 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 * The banner of bwbasic is ok, so stdout work
 * Input in command-line, so stdin work
 * some basic BASIC test work (example : 100 PRINT "HELLO")
-* access to files on SD works (LOAD "TEST.BAT" and then RUN)
+* access to files on SD works (LOAD "TEST.BAS" and then RUN)
 
 ### Known issues
 * some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in stdlib-circle ?
-* Typing OPTION TERMINAL ANSI and then CLS hangs the system (work undex linux) 
+* Typing OPTION TERMINAL ANSI and then CLS hangs the system (work under linux) 
 * I have a french keyboard, i change mapping in circle, need change in stdlib ?
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
 * Some minor warning in compilation 
@@ -94,6 +94,7 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 * Create Makefile 
 * Update of bwbasic files :
 - bwbasic.c
+
     replace    
     extern int main (int argc, char **argv);    
     by    
@@ -102,7 +103,9 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
     #else    
     extern int main (int argc, char **argv);    
     #endif    
+
 - bwbasic.h
+
     uncomment #include "bwb_user.h"    
     replace    
     extern int main (int argc, char **argv);    
@@ -111,7 +114,8 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
     extern int main_bwbasic (int argc, char **argv);    
     #else    
     extern int main (int argc, char **argv);    
-    #endif    
+    #endif
+    
 * add  bwb_user.h file
     #define HAVE_UNIX TRUE    
     #define DIRECTORY_CMDS FALSE    

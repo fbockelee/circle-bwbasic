@@ -82,8 +82,12 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 
 ### Known issues
 * some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in circle-stdlib ?
+
+
      Analyzed : some functions exists in circle (fatdir.cpp)     
 * Typing OPTION TERMINAL ANSI and then CLS hangs the system (work under linux)
+
+
      Analyzed : Sequence escape [2J not implemented in circle     
      in screen.cpp function CScreenDevice::Write (char chChar)     
 * I have a french keyboard

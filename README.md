@@ -91,6 +91,8 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
      Analyzed : Sequence escape [2J not implemented in circle     
      in screen.cpp function CScreenDevice::Write (char chChar)     
 * I have a french keyboard
+
+
      Analyzed : change mapping in circle in stdlib     
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
 * Some minor warning in compilation 

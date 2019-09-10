@@ -81,9 +81,13 @@ Initial build of circle-bwbasic with Circle, Circle-stdlib
 * access to files on SD works (LOAD "TEST.BAS" and then RUN)
 
 ### Known issues
-* some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in stdlib-circle ?
-* Typing OPTION TERMINAL ANSI and then CLS hangs the system (work under linux) 
-* I have a french keyboard, i change mapping in circle, need change in stdlib ?
+* some function may not be called : sleep(),chdir(),mkdir(),rmdir() - Missing in circle-stdlib ?
+     Analyzed : some functions exists in circle (fatdir.cpp)     
+* Typing OPTION TERMINAL ANSI and then CLS hangs the system (work under linux)
+     Analyzed : Sequence escape [2J not implemented in circle     
+     in screen.cpp function CScreenDevice::Write (char chChar)     
+* I have a french keyboard
+     Analyzed : change mapping in circle in stdlib     
 * When compiling, message for TRUE/FALSE redefined : conflict between STDLIB define and bywater define  (in progress)
 * Some minor warning in compilation 
 * When no keyboard, scrolling with false input (minor)
